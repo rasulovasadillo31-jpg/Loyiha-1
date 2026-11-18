@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple</title>
+  <!-- Bootstrap 5 CSS (Used selectively for grid & structural utilities) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Apple Design System CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       GLOBAL NAVIGATION BAR (44px Sticky Frosted Glass + Mega Menu Curtain)
+       ===================================================================== -->
+  <header id="ac-globalnav" class="ac-globalnav" role="banner">
+    <nav class="ac-gn-content" aria-label="Global">
+      <ul class="ac-gn-list">
+        <!-- Apple Logo -->
+        <li class="ac-gn-item ac-gn-apple">
+          <a class="ac-gn-link ac-gn-link-apple" href="#top" aria-label="Apple">
+            <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
+              <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z" fill="currentColor"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Desktop Menu Items (Trigger Mega Menu Dropdowns) -->
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="store"><a class="ac-gn-link" href="#store">Store</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="mac"><a class="ac-gn-link" href="#macbook-pro">Mac</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="ipad"><a class="ac-gn-link" href="#ipad-pro">iPad</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="iphone"><a class="ac-gn-link" href="#iphone-17-pro">iPhone</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="watch"><a class="ac-gn-link" href="#watch-series-11">Watch</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="vision"><a class="ac-gn-link" href="#vision">Vision</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="airpods"><a class="ac-gn-link" href="#airpods-pro">AirPods</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="tv"><a class="ac-gn-link" href="#tv-plus">TV &amp; Home</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="entertainment"><a class="ac-gn-link" href="#services-ticker">Entertainment</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="accessories"><a class="ac-gn-link" href="#trade-in">Accessories</a></li>
+        <li class="ac-gn-item ac-gn-item-menu" data-menu="support"><a class="ac-gn-link" href="#footer">Support</a></li>
+
+        <!-- Right Utility Icons: Search, Bag, Mobile Hamburger -->
+        <li class="ac-gn-item ac-gn-search">
+          <button id="gn-search-btn" class="ac-gn-link ac-gn-icon-btn" aria-label="Search apple.com" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+              <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z" fill="currentColor"/>
+            </svg>
+          </button>
+        </li>
+
+        <li class="ac-gn-item ac-gn-bag">
+          <button id="gn-bag-btn" class="ac-gn-link ac-gn-icon-btn" aria-label="Shopping Bag" aria-expanded="false">
+            <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
+              <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z" fill="currentColor"/>
+            </svg>
+          </button>
+        </li>
+
+        <li class="ac-gn-item ac-gn-menuicon">
+          <button id="gn-mobile-toggle" class="ac-gn-menuicon-button" aria-label="Menu" aria-expanded="false">
+            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top"></span>
+            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom"></span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Mega-Menu Dropdown Curtain -->
+    <div id="ac-gn-flyout" class="ac-gn-flyout" aria-hidden="true">
+      <div class="ac-gn-flyout-inner container-apple" id="ac-gn-flyout-content">
+        <!-- Populated dynamically via script.js based on hovered nav item or Search/Bag -->
+      </div>
+    </div>
+
+    <!-- Mobile Fullscreen Drawer -->
+    <div id="ac-gn-mobile-drawer" class="ac-gn-mobile-drawer" aria-hidden="true">
+      <ul class="ac-gn-mobile-list">
+        <li><a href="#store" class="mobile-nav-link">Store</a></li>
+        <li><a href="#macbook-pro" class="mobile-nav-link">Mac</a></li>
+        <li><a href="#ipad-pro" class="mobile-nav-link">iPad</a></li>
+        <li><a href="#iphone-17-pro" class="mobile-nav-link">iPhone</a></li>
+        <li><a href="#watch-series-11" class="mobile-nav-link">Watch</a></li>
+        <li><a href="#vision" class="mobile-nav-link">Vision</a></li>
+        <li><a href="#airpods-pro" class="mobile-nav-link">AirPods</a></li>
+        <li><a href="#tv-plus" class="mobile-nav-link">TV &amp; Home</a></li>
+        <li><a href="#services-ticker" class="mobile-nav-link">Entertainment</a></li>
+        <li><a href="#trade-in" class="mobile-nav-link">Accessories</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Backdrop Blur Curtain when Flyout is open -->
+  <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+
+  <!-- =====================================================================
+       MAIN CONTENT FLOW
+       ===================================================================== -->
+  <main id="top" class="main-content">
+
+    <!-- Sub-header Ribbon -->
+    <div class="ribbon-banner">
+      <div class="ribbon-content">
+        Get $180–$650 in credit when you trade in iPhone 13 or higher.<sup>1</sup>
+        <a href="#trade-in" class="ribbon-link">Shop iPhone <span class="chevron">&rsaquo;</span></a>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         HERO 1: iPhone 17 Pro (Dark Theme)
+         =================================================================== -->
+    <section id="iphone-17-pro" class="unit-hero theme-dark" aria-label="iPhone 17 Pro">
+      <div class="unit-copy-wrapper reveal-up">
+        <h2 class="headline">iPhone 17 Pro</h2>
+        <p class="subhead">All out Pro.</p>
+        <div class="cta-links">
+          <a href="#modal-info" class="btn-apple btn-apple-primary" data-product="iPhone 17 Pro">Learn more</a>
+          <a href="#modal-buy" class="btn-apple btn-apple-secondary-dark" data-product="iPhone 17 Pro" data-price="From $999 or $41.62/mo. for 24 mo.">Buy</a>
+        </div>
+      </div>
+      <div class="unit-image-wrapper">
+        <!-- High-resolution sleek titanium dark hardware visual -->
+        <div class="hero-visual hero-iphone-pro">
+          <div class="camera-plateau">
+            <div class="lens"></div>
+            <div class="lens"></div>
+            <div class="lens"></div>
+            <div class="lidar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         HERO 2: iPhone Air (Light Theme)
+         =================================================================== -->
+    <section id="iphone-air" class="unit-hero theme-light" aria-label="iPhone Air">
+      <div class="unit-copy-wrapper reveal-up">
+        <h2 class="headline">iPhone Air</h2>
+        <p class="subhead">The thinnest iPhone ever.<br>With the power of pro inside.</p>
+        <div class="cta-links">
+          <a href="#modal-info" class="btn-apple btn-apple-primary" data-product="iPhone Air">Learn more</a>
+          <a href="#modal-buy" class="btn-apple btn-apple-secondary-light" data-product="iPhone Air" data-price="From $899 or $37.45/mo. for 24 mo.">Buy</a>
+        </div>
+      </div>
+      <div class="unit-image-wrapper">
+        <div class="hero-visual hero-iphone-air">
+          <div class="ultra-thin-profile">
+            <span class="profile-glow"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         HERO 3: iPad Pro (Dark Theme)
+         =================================================================== -->
+    <section id="ipad-pro" class="unit-hero theme-dark" aria-label="iPad Pro">
+      <div class="unit-copy-wrapper reveal-up">
+        <h2 class="headline">iPad Pro</h2>
+        <p class="subhead">Unbelievably thin. Incredibly powerful.</p>
+        <p class="ai-callout">Built for Apple Intelligence.</p>
+        <div class="cta-links">
+          <a href="#modal-info" class="btn-apple btn-apple-primary" data-product="iPad Pro">Learn more</a>
+          <a href="#modal-buy" class="btn-apple btn-apple-secondary-dark" data-product="iPad Pro" data-price="From $999 or $83.25/mo. for 12 mo.">Buy</a>
+        </div>
+      </div>
+      <div class="unit-image-wrapper">
+        <div class="hero-visual hero-ipad-pro">
+          <div class="tandem-oled-screen">
+            <div class="oled-wave"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         2-COLUMN PROMO GRID (Bootstrap Grid with Apple 12px Gutters)
+         =================================================================== -->
+    <section class="promo-grid-section" aria-label="Featured Products">
+      <div class="container-fluid px-0">
+        <div class="row g-3 mx-0">
+
+          <!-- Tile 1: Apple Watch Series 11 -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="watch-series-11" class="unit-promo theme-light reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-logo-title">
+                  <svg class="inline-apple-icon" viewBox="0 0 14 17" width="16" height="20"><path d="m13.0729 6.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z" fill="currentColor"/></svg>
+                  WATCH <span class="series-tag">SERIES 11</span>
+                </h3>
+                <p class="promo-subhead">Thinstant classic.</p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="Apple Watch Series 11">Learn more</a>
+                  <a href="#modal-buy" class="btn-apple btn-apple-secondary-light btn-sm-apple" data-product="Apple Watch Series 11" data-price="From $399">Buy</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-watch">
+                <div class="watch-dial">
+                  <div class="watch-hand-hour"></div>
+                  <div class="watch-hand-min"></div>
+                  <div class="watch-hand-sec"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile 2: AirPods Pro 3 -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="airpods-pro" class="unit-promo theme-dark reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-headline">AirPods Pro 3</h3>
+                <p class="promo-subhead">The world’s best in-ear Active Noise Cancellation.</p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="AirPods Pro 3">Learn more</a>
+                  <a href="#modal-buy" class="btn-apple btn-apple-secondary-dark btn-sm-apple" data-product="AirPods Pro 3" data-price="$249">Buy</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-airpods">
+                <div class="airpod-acoustic-ring"></div>
+                <div class="airpod-acoustic-ring delay-1"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile 3: MacBook Pro 14" & 16" -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="macbook-pro" class="unit-promo theme-dark reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-headline">MacBook Pro</h3>
+                <p class="promo-subhead">A work of smart.</p>
+                <p class="ai-callout-sm">Built for Apple Intelligence.</p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="MacBook Pro">Learn more</a>
+                  <a href="#modal-buy" class="btn-apple btn-apple-secondary-dark btn-sm-apple" data-product="MacBook Pro" data-price="From $1599">Buy</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-macbook">
+                <div class="macbook-lid">
+                  <div class="macbook-wallpaper"></div>
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile 4: MacBook Air -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="macbook-air" class="unit-promo theme-light reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-headline">MacBook Air</h3>
+                <p class="promo-subhead">Lean. Mean. M4 machine.</p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="MacBook Air">Learn more</a>
+                  <a href="#modal-buy" class="btn-apple btn-apple-secondary-light btn-sm-apple" data-product="MacBook Air" data-price="From $999">Buy</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-macbook-air">
+                <div class="air-wedge"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile 5: Apple Trade In -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="trade-in" class="unit-promo theme-light reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-logo-title">
+                  <svg class="inline-apple-icon" viewBox="0 0 14 17" width="16" height="20"><path d="m13.0729 6.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z" fill="currentColor"/></svg>
+                  Trade In
+                </h3>
+                <p class="promo-subhead">Get $180–$650 in credit when you<br>trade in iPhone 13 or higher.<sup>1</sup></p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="Apple Trade In">Get your estimate</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-tradein">
+                <div class="tradein-cards">
+                  <div class="t-card t-card-back"></div>
+                  <div class="t-card t-card-front"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile 6: Apple Card -->
+          <div class="col-12 col-md-6 promo-col">
+            <div id="apple-card" class="unit-promo theme-light reveal-up">
+              <div class="promo-copy">
+                <h3 class="promo-logo-title">
+                  <svg class="inline-apple-icon" viewBox="0 0 14 17" width="16" height="20"><path d="m13.0729 6.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z" fill="currentColor"/></svg>
+                  Card
+                </h3>
+                <p class="promo-subhead">Get up to 3% Daily Cash back<br>with every purchase.</p>
+                <div class="cta-links">
+                  <a href="#modal-info" class="btn-apple btn-apple-primary btn-sm-apple" data-product="Apple Card">Learn more</a>
+                  <a href="#modal-buy" class="btn-apple btn-apple-secondary-light btn-sm-apple" data-product="Apple Card" data-price="No annual fees. Apply in minutes.">Apply now</a>
+                </div>
+              </div>
+              <div class="promo-visual visual-card">
+                <div class="titanium-card">
+                  <div class="card-chip"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         APPLE TV+ SHOWCASE CAROUSEL (Center-Focused Endless Loop + Controls)
+         =================================================================== -->
+    <section id="tv-plus" class="tv-carousel-section" aria-label="Apple TV+ Featured Originals">
+      <div class="tv-viewport">
+        <!-- Prev / Next Clickable Edge Regions -->
+        <button id="tv-prev-btn" class="tv-nav-arrow tv-prev" aria-label="Previous show">
+          <span>&#8249;</span>
+        </button>
+        <button id="tv-next-btn" class="tv-nav-arrow tv-next" aria-label="Next show">
+          <span>&#8250;</span>
+        </button>
+
+        <!-- Track populated and managed by script.js -->
+        <div id="tv-track" class="tv-track"></div>
+      </div>
+
+      <!-- Pagination Dots + Play/Pause Control -->
+      <div class="tv-controls-bar">
+        <div id="tv-dots" class="tv-dots" role="tablist" aria-label="Choose a slide"></div>
+        <button id="tv-play-pause" class="tv-play-pause" aria-label="Pause slideshow" title="Pause">
+          <!-- Pause Icon (Default) -->
+          <svg id="icon-pause" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <rect x="2" y="1.5" width="3" height="9" rx="0.5"/>
+            <rect x="7" y="1.5" width="3" height="9" rx="0.5"/>
+          </svg>
+          <!-- Play Icon (Hidden when playing) -->
+          <svg id="icon-play" class="d-none" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.5 1.5L10.5 6L2.5 10.5V1.5Z"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         APPLE SERVICES MINI-CARDS TICKER (Arcade, Fitness+, Music)
+         =================================================================== -->
+    <section id="services-ticker" class="services-ticker-section" aria-label="Apple Services">
+      <div class="ticker-wrapper" id="ticker-wrapper">
+        <div class="ticker-track" id="ticker-track">
+          <!-- Populated & cloned seamlessly via script.js -->
+        </div>
+      </div>
+      <div class="ticker-control-row">
+        <button id="ticker-toggle" class="tv-play-pause" aria-label="Pause services marquee">
+          <svg id="ticker-icon-pause" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <rect x="2" y="1.5" width="3" height="9" rx="0.5"/>
+            <rect x="7" y="1.5" width="3" height="9" rx="0.5"/>
+          </svg>
+          <svg id="ticker-icon-play" class="d-none" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.5 1.5L10.5 6L2.5 10.5V1.5Z"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       APPLE FOOTER (Footnotes + 5-Column Directory + Mobile Accordions)
+       ===================================================================== -->
+  <footer id="footer" class="ac-globalfooter" role="contentinfo">
+    <div class="ac-gf-content">
+
+      <!-- Footnotes Legal Section -->
+      <section class="ac-gf-sosumi" aria-label="Footnotes">
+        <ol>
+          <li>Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least 18 years old to be eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card.</li>
+          <li>Apple Intelligence is available in beta on all iPhone 16 and iPhone 17 models, iPad mini (A17 Pro), and iPad and Mac models with M1 and later, with Siri and device language set to English (Australia, Canada, Ireland, New Zealand, South Africa, UK, or U.S.).</li>
+          <li>A subscription is required for Apple TV+, Apple Arcade, Apple Fitness+, and Apple Music. Features are subject to change. Some features, applications, and services may not be available in all regions or all languages.</li>
+        </ol>
+      </section>
+
+      <!-- 5-Column Directory (Desktop) / Interactive Accordions (Mobile) -->
+      <nav class="ac-gf-directory" aria-label="Apple Directory">
+        <div class="ac-gf-directory-column">
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Shop and Learn <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#store">Store</a></li>
+              <li><a href="#macbook-pro">Mac</a></li>
+              <li><a href="#ipad-pro">iPad</a></li>
+              <li><a href="#iphone-17-pro">iPhone</a></li>
+              <li><a href="#watch-series-11">Watch</a></li>
+              <li><a href="#vision">Vision</a></li>
+              <li><a href="#airpods-pro">AirPods</a></li>
+              <li><a href="#tv-plus">TV &amp; Home</a></li>
+              <li><a href="#services-ticker">AirTag</a></li>
+              <li><a href="#trade-in">Accessories</a></li>
+              <li><a href="#apple-card">Gift Cards</a></li>
+            </ul>
+          </div>
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Apple Wallet <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#apple-card">Wallet</a></li>
+              <li><a href="#apple-card">Apple Card</a></li>
+              <li><a href="#apple-card">Apple Pay</a></li>
+              <li><a href="#apple-card">Apple Cash</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ac-gf-directory-column">
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Account <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Manage Your Apple Account</a></li>
+              <li><a href="#top">Apple Store Account</a></li>
+              <li><a href="#top">iCloud.com</a></li>
+            </ul>
+          </div>
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Entertainment <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#services-ticker">Apple One</a></li>
+              <li><a href="#tv-plus">Apple TV+</a></li>
+              <li><a href="#services-ticker">Apple Music</a></li>
+              <li><a href="#services-ticker">Apple Arcade</a></li>
+              <li><a href="#services-ticker">Apple Fitness+</a></li>
+              <li><a href="#services-ticker">Apple News+</a></li>
+              <li><a href="#services-ticker">Apple Podcasts</a></li>
+              <li><a href="#services-ticker">Apple Books</a></li>
+              <li><a href="#services-ticker">App Store</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ac-gf-directory-column">
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Apple Store <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Find a Store</a></li>
+              <li><a href="#top">Genius Bar</a></li>
+              <li><a href="#top">Today at Apple</a></li>
+              <li><a href="#top">Group Reservations</a></li>
+              <li><a href="#top">Apple Camp</a></li>
+              <li><a href="#top">Apple Store App</a></li>
+              <li><a href="#top">Certified Refurbished</a></li>
+              <li><a href="#trade-in">Apple Trade In</a></li>
+              <li><a href="#apple-card">Financing</a></li>
+              <li><a href="#top">Carrier Deals at Apple</a></li>
+              <li><a href="#top">Order Status</a></li>
+              <li><a href="#top">Shopping Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ac-gf-directory-column">
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">For Business <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Apple and Business</a></li>
+              <li><a href="#top">Shop for Business</a></li>
+            </ul>
+          </div>
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">For Education <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Apple and Education</a></li>
+              <li><a href="#top">Shop for K-12</a></li>
+              <li><a href="#top">Shop for College</a></li>
+            </ul>
+          </div>
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">For Healthcare <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Apple in Healthcare</a></li>
+              <li><a href="#top">Mac in Healthcare</a></li>
+              <li><a href="#watch-series-11">Health on Apple Watch</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ac-gf-directory-column">
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">Apple Values <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Accessibility</a></li>
+              <li><a href="#top">Education</a></li>
+              <li><a href="#top">Environment</a></li>
+              <li><a href="#top">Inclusion and Diversity</a></li>
+              <li><a href="#top">Privacy</a></li>
+              <li><a href="#top">Racial Equity and Justice</a></li>
+              <li><a href="#top">Supply Chain</a></li>
+            </ul>
+          </div>
+          <div class="ac-gf-directory-column-section">
+            <button class="ac-gf-directory-title" aria-expanded="false">About Apple <span class="plus-icon">+</span></button>
+            <ul class="ac-gf-directory-list">
+              <li><a href="#top">Newsroom</a></li>
+              <li><a href="#top">Apple Leadership</a></li>
+              <li><a href="#top">Career Opportunities</a></li>
+              <li><a href="#top">Investors</a></li>
+              <li><a href="#top">Ethics &amp; Compliance</a></li>
+              <li><a href="#top">Events</a></li>
+              <li><a href="#top">Contact Apple</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Bottom Legal & Copyright -->
+      <section class="ac-gf-footer">
+        <div class="ac-gf-footer-shop">
+          More ways to shop: <a href="#top">Find an Apple Store</a> or <a href="#top">other retailer</a> near you. Or call 1-800-MY-APPLE.
+        </div>
+        <div class="ac-gf-footer-legal">
+          <div class="ac-gf-footer-legal-copyright">Copyright &copy; 2026 Apple Inc. All rights reserved.</div>
+          <div class="ac-gf-footer-legal-links">
+            <a href="#top">Privacy Policy</a>
+            <a href="#top">Terms of Use</a>
+            <a href="#top">Sales and Refunds</a>
+            <a href="#top">Legal</a>
+            <a href="#top">Site Map</a>
+          </div>
+          <div class="ac-gf-footer-locale">United States</div>
+        </div>
+      </section>
+
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       INTERACTIVE QUICK-VIEW / BAG MODAL (For Learn More & Buy Buttons)
+       ===================================================================== -->
+  <div id="apple-quick-modal" class="apple-modal" aria-hidden="true" role="dialog">
+    <div class="apple-modal-card">
+      <button id="apple-modal-close" class="apple-modal-close" aria-label="Close modal">&times;</button>
+      <div id="apple-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Apple Interactive Script -->
+  <script src="script.js"></script>
+</body>
+</html>
